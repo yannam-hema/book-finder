@@ -42,3 +42,16 @@ Book Finder web Application will help to search for books
  Fallbacks for Missing Data → Show placeholder cover or “No rating available.”
 
  Final Styling & Minimalist UI Polish → Spacing, fonts, colors, smoothnes
+
+-------------------------------------------------------------------------------
+
+# Commit 1(Code)
+## initialize React app with basic structure
+
+- Created React app using CRA
+- Removed default boilerplate files
+- Added components folder
+- Created Main component
+- Created Header component with logo
+
+
