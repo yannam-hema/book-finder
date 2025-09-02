@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Aganitha-Web-developer-Task-BookFinder
+Book Finder web Application will help to search for books 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Book Finder Build Roadmap (Priority Order)
 
-## Available Scripts
+**Phase 1 – Core Foundation (MVP must work)**
 
-In the project directory, you can run:
+ Setup Project → Create React app, basic folder structure.
 
-### `npm start`
+ Search Bar → Implement input + trigger API call (Open Library).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ Show Search Results (grid) → Render list of BookCards with title, author, cover (no filters yet).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ Loader + Error Handling → Show spinner while fetching, error message if API fails.
 
-### `npm test`
+**Phase 2 – Core User Flow**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Book Details Modal → Open popup on card click, show full details (title, author, description, rating).
 
-### `npm run build`
+ Responsive Layout → Adjust grid (desktop vs. mobile).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Phase 3 – Advanced Features**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Filters Bar (on top) → Add author filter + page range filter.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ Infinite Scroll → Fetch next page as user scrolls.
 
-### `npm run eject`
+ Load More Button (fallback) → Manual trigger to fetch next page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ Empty State Message → If no results, show friendly message.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Phase 4 – Landing Page Polish**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ Header + Tagline → Add logo/name + small slogan.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ Fixed Genre Collections → Horizontal rows (Fantasy, Science & Tech, etc.), each fetching from API.
 
-## Learn More
+**Phase 5 – Extras & UX Polishing**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ Accessibility → Modal keyboard handling, alt text for covers.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ Fallbacks for Missing Data → Show placeholder cover or “No rating available.”
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Final Styling & Minimalist UI Polish → Spacing, fonts, colors, smoothnes
