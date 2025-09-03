@@ -60,3 +60,11 @@ Book Finder web Application will help to search for books
 - Included logo and tagline
 - Added main headline
 - Added search bar with button
+
+# commit 3
+**integrate OpenLibrary API with custom hook**
+- created useFetchBookData custom hook inside utils to fetch books from OpenLibrary API
+- used useState to manage input name and committed search term
+- connected hook to component to fetch books based on user input
+- set up search trigger on button click / Enter key
+- followed best practice by keeping custom hooks inside utils

@@ -1,7 +1,19 @@
+import { useState } from "react";
+import useFetchBookData from "../utils/useFetchBookData";
 const Header=()=>{
+     
+    //state variables for name input and name to search
+    const [name, setname]=useState("");
+    const[nameTosearch,setnameTosearch]=useState("");
+    //calling custom hook useFetchBookData with nameTosearch
+    const searchedBooks=useFetchBookData(nameTosearch);
+
+    //function to set nameTosearch to name and log searchedBooks
     const searchBooks=()=>{
-        console.log("searching books");
+        setnameTosearch(name);
+        console.log(searchedBooks);
     }
+    
     //header with logo image tagline and search bar styled with shadow and flexbox
     return <div className="flex flex-row items-center justify-between shadow-md bg-yellow-200">
         <div>
@@ -11,10 +23,17 @@ const Header=()=>{
         <div>
             <h1 className="text-4xl font-serif"> Welcome to your Book Finder 📖</h1>
         </div>
+        {/* {
+        //on keydown enter(input) calls searchBooks function
+        //on change of input setname to e.target.value
+        //on click of button calls searchBooks function} */}
         <div className="px-8">
-        <input  className=" text-black font-semibold border-black w-56 h-7 rounded-lg bg-slate-300 m-4 " placeholder="Search For Books"/>
+        <input  className=" text-black font-semibold border-black w-56 h-7 rounded-lg bg-slate-300 m-4 "
+         onChange={(e)=>setname(e.target.value)}
+         onKeyDown={(e)=>{if(e.key==="Enter")searchBooks()}}
+        placeholder="Search For Books"/>
         <button className="text-white bg-black rounded-md px-1" onClick={searchBooks}>Search</button>
-        </div>
+   </div>
     </div>
-}
+};
 export default Header;
