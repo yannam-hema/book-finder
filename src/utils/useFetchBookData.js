@@ -25,7 +25,7 @@ const useFetchBookData = (nameTosearch) => {
         }));
         setBookData(dataOnlyNeeded || []);
       } catch (error) {
-        console.log("error", error);
+        <h1> Something went wrong while fetching data</h1>      
       }
     };
 

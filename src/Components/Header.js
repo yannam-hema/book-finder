@@ -10,7 +10,7 @@ const Header=({onSearch})=>{
     }
     
     //header with logo image tagline and search bar styled with shadow and flexbox
-    return <div className="flex flex-row items-center justify-between shadow-md bg-yellow-200">
+    return <div className="flex flex-row items-center justify-between shadow-md bg-indigo-300">
         <div>
         <img  className=" h-16 " src="Logo-BOY.png"/>
         <h3>Discover the books you love❤️</h3>

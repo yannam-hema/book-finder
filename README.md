@@ -77,3 +77,6 @@ Book Finder web Application will help to search for books
 - created BookCard component to show only selected fields (title, author, year, cover)
 - cleaned useFetchBookData to return simplified data instead of full API response
 - improved UI separation to follow single responsibility principle
+
+# commit 5
+**Styled book card componet**
