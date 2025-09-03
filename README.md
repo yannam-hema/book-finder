@@ -54,4 +54,9 @@ Book Finder web Application will help to search for books
 - Created Main component
 - Created Header component with logo
 
-
+# commit 2
+**configured Tailwind css**
+## Header component
+- Included logo and tagline
+- Added main headline
+- Added search bar with button
