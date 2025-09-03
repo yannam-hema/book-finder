@@ -1,17 +1,12 @@
 import { useState } from "react";
 import useFetchBookData from "../utils/useFetchBookData";
-const Header=()=>{
+const Header=({onSearch})=>{
      
-    //state variables for name input and name to search
+    //state variables for name input 
     const [name, setname]=useState("");
-    const[nameTosearch,setnameTosearch]=useState("");
-    //calling custom hook useFetchBookData with nameTosearch
-    const searchedBooks=useFetchBookData(nameTosearch);
-
-    //function to set nameTosearch to name and log searchedBooks
+    //onSearch is prop passed to Main Component to set query
     const searchBooks=()=>{
-        setnameTosearch(name);
-        console.log(searchedBooks);
+       onSearch(name);
     }
     
     //header with logo image tagline and search bar styled with shadow and flexbox
@@ -34,6 +29,8 @@ const Header=()=>{
         placeholder="Search For Books"/>
         <button className="text-white bg-black rounded-md px-1" onClick={searchBooks}>Search</button>
    </div>
+
     </div>
+    
 };
 export default Header;

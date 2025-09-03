@@ -68,3 +68,12 @@ Book Finder web Application will help to search for books
 - connected hook to component to fetch books based on user input
 - set up search trigger on button click / Enter key
 - followed best practice by keeping custom hooks inside utils
+
+# commit 4
+**moved search results rendering into Body with BookCard component**
+
+- lifted state up to Maincomponent (Header only handles search input now)
+- Body receives searchedBooks as props and renders them
+- created BookCard component to show only selected fields (title, author, year, cover)
+- cleaned useFetchBookData to return simplified data instead of full API response
+- improved UI separation to follow single responsibility principle

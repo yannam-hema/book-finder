@@ -15,7 +15,15 @@ const useFetchBookData = (nameTosearch) => {
         );
         const json = await books.json();
         console.log(json.docs); 
-        setBookData(json.docs || []);
+        const dataOnlyNeeded= (json.docs || []).map((book) => ({
+          title: book.title,
+          author: book.author_name?.[0] || "Unknown Author",
+          year: book.first_publish_year || "N/A",
+          cover: book.cover_i
+            ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+            : null, // null if no cover
+        }));
+        setBookData(dataOnlyNeeded || []);
       } catch (error) {
         console.log("error", error);
       }
