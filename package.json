@@ -18,6 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://openlibrary.org",
   "eslintConfig": {
     "extends": [
       "react-app",

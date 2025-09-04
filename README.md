@@ -80,3 +80,12 @@ Book Finder web Application will help to search for books
 
 # commit 5
 **Styled book card componet**
+
+# Commit 6
+**clickable book cards + popup for details**
+
+- book card now triggers parent when clicked
+- body keeps track of which book is active and shows popup
+- popup in center with dark background (click outside or Esc to close)
+- added basic keyboard support (Esc key closes)
+- hover and image rendering feels nice now
