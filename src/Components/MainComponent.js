@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./Header";
 import Body from "./Body";
+import Footer from "./Footer";
 import useFetchBookData from "../utils/useFetchBookData";
 import MainMessage from "./MainMessage";
 import GettingBooks from "./GettingBooks";
@@ -33,7 +34,7 @@ const MainComponent = () => {
         {!loading && !error && bookData.length === 0 && query && <Noresult/>}
 
         <Body books={bookData} />
-        <h3>Footer</h3>
+        <Footer/>
       </div>
     </div>
   );

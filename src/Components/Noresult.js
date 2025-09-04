@@ -1,11 +1,19 @@
-const Noresult=() => {
-    return  <div className="flex flex-row items-center justify-center bg-indigo-300 bg-opacity-50">
-        <div className=" my-52 h-52 w-1/2 rounded-xl text-center text-4xl bg-indigo-300 shadow-xl text-teal-950">
-            <p className="p-6 text-4xl font-bold">
-            There is no book that you are searching for. <br />
-            Please check your spelling.
+const Noresult = () => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <div className="flex-grow flex items-center justify-center px-4">
+        <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl rounded-xl text-center bg-indigo-300 shadow-xl text-teal-950 p-6">
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold">
+            There is no book that you are searching for.
+            <br />
+            <span className="block mt-2 font-normal">
+              Please check your spelling.
+            </span>
           </p>
         </div>
+      </div>
     </div>
-}
+  );
+};
+
 export default Noresult;

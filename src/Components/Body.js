@@ -3,6 +3,7 @@ import BookCard from "./BookCard";
 import PopUp from "./PopUp";
 
 const Body = ({ books = [] }) => {
+    books= books.filter(book => book.title.length <= 30);
   //state variable to store current book for popup
   const [currentBook, setCurrentBook] = useState(null);
 

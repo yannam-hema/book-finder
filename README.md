@@ -107,3 +107,7 @@ Book Finder web Application will help to search for books
 - when searching again, old results vanish before new fetch
 - loading/error/no-results messages are simple and reusable now
 
+# commit 10
+-made reponsive other components
+
+

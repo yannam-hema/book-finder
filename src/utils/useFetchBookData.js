@@ -1,5 +1,5 @@
 //custom hook to fetch the data from open library api
-import { API } from "./API";
+import { API } from "./Constants";
 import { useState, useEffect } from "react";
 //hook takes nameTosearch as argument
 const useFetchBookData = (nameTosearch) => {
