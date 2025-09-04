@@ -100,3 +100,10 @@ Book Finder web Application will help to search for books
 - shows API failed message when request fails  
 - shows no results message when search returns empty  
 
+# commit 9
+**made main page cleaner and split things into small components**
+- separated out MainMessage, GettingBooks, ErrorElement, NoResult
+- main page now shows intro only when no query or books are cleared
+- when searching again, old results vanish before new fetch
+- loading/error/no-results messages are simple and reusable now
+

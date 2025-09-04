@@ -17,6 +17,7 @@ const useFetchBookData = (nameTosearch) => {
     const fetchBooks = async () => {
       setLoading(true);
       setError(null);
+      setBookData([]);
       try {
         const books = await fetch(
           API + encodeURIComponent(nameTosearch)

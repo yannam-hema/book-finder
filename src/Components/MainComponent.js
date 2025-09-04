@@ -2,6 +2,10 @@ import { useState } from "react";
 import Header from "./Header";
 import Body from "./Body";
 import useFetchBookData from "../utils/useFetchBookData";
+import MainMessage from "./MainMessage";
+import GettingBooks from "./GettingBooks";
+import ErrorElement from "./ErrorElement";
+import Noresult from "./Noresult";
 
 const MainComponent = () => {
   const [query, setquery] = useState("");
@@ -14,24 +18,19 @@ const MainComponent = () => {
   };
   return (
     <div>
-      <div>
+      <div >
         <Header onSearch={fetchBooks} />
+        {/* ✅ Show MainMessage only when no query OR when books are cleared */}
+      {!query && !loading && !error && bookData.length === 0 && <MainMessage />}
 
         {/* show loading message */}
-        {loading && <p className="text-center text-4xl ">Getting your books 📖📖📚...</p>}
+        {loading && <GettingBooks/> }
 
         {/* show API error message */}
-        {error && (
-          <p className="text-center text-red-600 font-extrabold">API failed ? {error}</p>
-        )}
+        {error && <ErrorElement/>}
 
         {/* show no results when API works but returns nothing */}
-        {!loading && !error && bookData.length === 0 && query && (
-          <p className="text-center  text-4xl text-teal-950">
-            There is no book that you are searching for. <br />
-            Please check your spelling.
-          </p>
-        )}
+        {!loading && !error && bookData.length === 0 && query && <Noresult/>}
 
         <Body books={bookData} />
         <h3>Footer</h3>
