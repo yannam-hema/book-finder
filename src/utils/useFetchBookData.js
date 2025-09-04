@@ -1,17 +1,25 @@
 //custom hook to fetch the data from open library api
+import { API } from "./API";
 import { useState, useEffect } from "react";
 //hook takes nameTosearch as argument
 const useFetchBookData = (nameTosearch) => {
 //state variable to store book data
   const [bookData, setBookData] = useState([]);
+//state variable to handle loading
+  const [loading, setLoading] = useState(false);
+//state variable to handle error
+  const [error, setError] = useState(null);
+
 // useEffect to fetch data when nameTosearch changes
   useEffect(() => {
     if (!nameTosearch) return; 
   //async function to fetch books from open library api
     const fetchBooks = async () => {
+      setLoading(true);
+      setError(null);
       try {
         const books = await fetch(
-          "https://openlibrary.org/search.json?title=" + encodeURIComponent(nameTosearch)
+          API + encodeURIComponent(nameTosearch)
         );
         const json = await books.json();
         console.log(json.docs); 
@@ -25,14 +33,17 @@ const useFetchBookData = (nameTosearch) => {
         }));
         setBookData(dataOnlyNeeded || []);
       } catch (error) {
-        <h1> Something went wrong while fetching data</h1>      
+       setError("Failed to fetch books. Please try again."+error.message);     
+      }
+      finally{
+        setLoading(false);
       }
     };
 
     fetchBooks();
   }, [nameTosearch]);
 
-  return bookData; 
+  return {bookData ,loading, error}; 
 };
 
 export default useFetchBookData;

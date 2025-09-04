@@ -94,3 +94,9 @@ Book Finder web Application will help to search for books
 **Responsiveness**
 - header, book cards and popup now look good on both small and large screens
 
+# Commit 8
+**added loading and error handling for book search**  
+- shows "Getting your books ??..." when loading  
+- shows API failed message when request fails  
+- shows no results message when search returns empty  
+

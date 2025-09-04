@@ -1,10 +1,10 @@
-import Maincomponet from './Components/MainComponent';
+import MainComponent from './components/MainComponent';
 import './App.css';
 
 function App() {
   return (
     <div className="">
-      <Maincomponet/>
+      <MainComponent/>
     </div>
   );
 }

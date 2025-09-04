@@ -7,7 +7,7 @@ const Body = ({ books = [] }) => {
   const [currentBook, setCurrentBook] = useState(null);
 
   return (
-    <div >
+    <div>
       {/*  Body component to display list of books in flexbox
       on click of book card setCurrentBook to book to show popup */}
       <div className="grid grid-cols-2 md:grid-cols-5 p-2 gap-3">
