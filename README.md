@@ -89,3 +89,8 @@ Book Finder web Application will help to search for books
 - popup in center with dark background (click outside or Esc to close)
 - added basic keyboard support (Esc key closes)
 - hover and image rendering feels nice now
+
+# Commit 7
+**Responsiveness**
+- header, book cards and popup now look good on both small and large screens
+

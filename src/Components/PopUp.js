@@ -15,18 +15,18 @@ const PopUp = ({ book, onClose }) => {
   if (!book) return null;
 
   return (
-    // 📌 This is the dark overlay background
+    // This is the dark overlay background
     <div
       className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-      onClick={onClose} // 👈 Clicking on overlay closes popup
+      onClick={onClose} // Clicking on overlay closes popup
     >
-      {/* 📌 This is the actual white popup card */}
+      {/*This is the actual white popup card */}
       <div
         className="bg-indigo-200 rounded-lg shadow-xl p-6 w-96 relative"
         onClick={(e) => e.stopPropagation()} 
-        // 👆 Stop event so clicking inside popup doesn't close it
+        // Stop event so clicking inside popup doesn't close it
       >
-        {/* ❌ Close button in top-right */}
+        {/* Close button in top-right */}
         <button
           className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl"
           onClick={onClose}
@@ -36,28 +36,27 @@ const PopUp = ({ book, onClose }) => {
         </button>
 
         {/* 📖 Book Title */}
-        <h1 className="text-xl font-bold mb-3">{book.title}</h1>
-
-        {/* 📚 Book cover (or placeholder if no cover) */}
+        <h1 className="text-lg md:text-2xl font-bold text-center mb-4">{book.title}</h1>
+        {/*  Book cover (or placeholder if no cover) */}
         {book.cover ? (
           <img
             src={book.cover}
             alt={book.title}
-            className="w-32 h-44 mx-auto rounded mb-4 object-cover"
+            className="w-28 h-40 md:w-36 md:h-52 mx-auto rounded mb-4 object-cover shadow"
           />
         ) : (
-          <div className="w-32 h-44 mx-auto bg-gray-300 flex items-center justify-center mb-4 rounded">
+          <div className="w-28 h-40 md:w-36 md:h-52 mx-auto bg-gray-300 flex items-center justify-center mb-4 rounded shadow">
             📚
           </div>
         )}
 
-        {/* ✍️ Author name */}
-        <p className="text-sm">
+        {/* Author name */}
+        <p className="space-y-2 text-sm md:text-base">
           <span className="font-semibold">Author:</span> {book.author}
         </p>
 
-        {/* 📅 Published year */}
-        <p className="text-sm">
+        {/* Published year */}
+        <p className="space-y-2 text-sm md:text-base">
           <span className="font-semibold">Published:</span> {book.year}
         </p>
       </div>
