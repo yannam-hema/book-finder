@@ -212,7 +212,7 @@ As users type in the search bar, real-time recommendations (book titles, authors
 
 Instead of showing limited results, users can click Load More (or auto-load while scrolling)
 
-##(personal interest) 
+## (personal interest) 
 **OpenAI Library Integration**
 
 When a user clicks on View Book, it will fetch additional book details from the OpenAI API (such as summaries, reviews, and recommendations).
