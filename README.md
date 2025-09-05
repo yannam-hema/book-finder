@@ -3,17 +3,17 @@ Book Finder web Application will help to search for books
 
 ## 📖 Book Finder 
 
--Book Finder is a minimalist and user-friendly web application built with React and Tailwind CSS that allows users to search for books by title using the Open Library API.
+Book Finder is a minimalist and user-friendly web application built with React and Tailwind CSS that allows users to search for books by title using the Open Library API.
 
--The application focuses on simplicity and clean design, ensuring a smooth user experience across both desktop and mobile devices. Users can quickly search for books, view essential details such as title,cover image, and click on a book to explore more details(title, author , image and published year) in a popup.
+The application focuses on simplicity and clean design, ensuring a smooth user experience across both desktop and mobile devices. Users can quickly search for books, view essential details such as title,cover image, and click on a book to explore more details(title, author , image and published year) in a popup.
 
--Special attention has been given to error handling and fallback states:
+Special attention has been given to error handling and fallback states:
 
--Friendly messages guide the user when no results are found or when errors occur.
+Friendly messages guide the user when no results are found or when errors occur.
 
--Placeholder images are displayed when book covers are missing.
+Placeholder images are displayed when book covers are missing.
 
--A clear landing page introduces the app and resets when the search input is cleared.
+A clear landing page introduces the app and resets when the search input is cleared.
 
 - By following best coding practices (component reusability, separation of concerns, custom hooks for API handling, and responsive design principles), the app is lightweight, maintainable, and scalable for future enhancements like filters, infinite scroll, and dark mode.
 -----------------------------------------------------------------
