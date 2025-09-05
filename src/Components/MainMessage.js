@@ -6,7 +6,7 @@ const MainMessage = () => {
           <h1>
             Start by searching for your favorite book above!  
             <br />
-            You can search by title and don't forget spelling is to be correct ✅
+            You can search by title and Be sure to spell it right ✅
             <br />
             Happy Reading 📖
           </h1>
