@@ -22,7 +22,7 @@ const PopUp = ({ book, onClose }) => {
     >
       {/*This is the actual white popup card */}
       <div
-        className="bg-indigo-200 rounded-lg shadow-xl p-6 w-96 relative"
+        className="bg-indigo-200 rounded-lg shadow-xl p-4 sm:p-6 w-[90%] max-w-sm sm:max-w-md relative"
         onClick={(e) => e.stopPropagation()} 
         // Stop event so clicking inside popup doesn't close it
       >
