@@ -3,19 +3,19 @@ Book Finder web Application will help to search for books
 
 ## 📖 Book Finder 
 
--Book Finder is a minimalist and user-friendly web application built with React and Tailwind CSS that allows users to search for books by title, author, or keyword using the Open Library API.
+Book Finder is a minimalist and user-friendly web application built with React and Tailwind CSS that allows users to search for books by title using the Open Library API.
 
--The application focuses on simplicity and clean design, ensuring a smooth user experience across both desktop and mobile devices. Users can quickly search for books, view essential details such as title, author, cover image, and year, and click on a book to explore more details in a popup.
+The application focuses on simplicity and clean design, ensuring a smooth user experience across both desktop and mobile devices. Users can quickly search for books, view essential details such as title,cover image, and click on a book to explore more details(title, author , image and published year) in a popup.
 
--Special attention has been given to error handling and fallback states:
+Special attention has been given to error handling and fallback states:
 
--Friendly messages guide the user when no results are found or when errors occur.
+Friendly messages guide the user when no results are found or when errors occur.
 
--Placeholder images are displayed when book covers are missing.
+Placeholder images are displayed when book covers are missing.
 
--A clear landing page introduces the app and resets when the search input is cleared.
+A clear landing page introduces the app and resets when the search input is cleared.
 
--By following best coding practices (component reusability, separation of concerns, custom hooks for API handling, and responsive design principles), the app is lightweight, maintainable, and scalable for future enhancements like filters, infinite scroll, and dark mode.
+- By following best coding practices (component reusability, separation of concerns, custom hooks for API handling, and responsive design principles), the app is lightweight, maintainable, and scalable for future enhancements like filters, infinite scroll, and dark mode.
 -----------------------------------------------------------------
 # ✅ Best Practices Followed
 
@@ -74,6 +74,8 @@ Load More / Infinite Scroll for results.
 Additional filters (e.g., genre, year).
 
 Global state management with Context API for scaling.
+
+
 
 # PLANNING AND DESIGN PHASE
 
@@ -187,5 +189,32 @@ Global state management with Context API for scaling.
 # commit 10
 -made reponsive other components
 
+# Future Advancements
+## OpenLibrary Integration (Primary Goal)
+
+Each book popup will have a View Details button.
+
+Clicking it will redirect users to the respective OpenLibrary book page for more information.
+
+Example: Author bio, book editions, publishing details, etc.
+
+## Default Categories on Homepage
+
+Add pre-defined categories like Fiction, Non-Fiction, Science, Technology, Self-Help, History, Kids etc.
+
+Users can browse directly by category instead of only searching.
+
+## Enhanced Search with Auto-Suggestions
+
+As users type in the search bar, real-time recommendations (book titles, authors, genres) will be displayed.
+
+## Load More Button / Infinite Scroll
+
+Instead of showing limited results, users can click Load More (or auto-load while scrolling)
+
+## (personal interest) 
+**OpenAI Library Integration**
+
+When a user clicks on View Book, it will fetch additional book details from the OpenAI API (such as summaries, reviews, and recommendations).
 
 
