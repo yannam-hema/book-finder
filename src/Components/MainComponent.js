@@ -10,32 +10,28 @@ import Noresult from "./Noresult";
 
 const MainComponent = () => {
   const [query, setquery] = useState("");
-
-  //calling custom hook useFetchBookData with nameTosearch
   const { bookData, loading, error } = useFetchBookData(query);
 
   const fetchBooks = (nameTosearch) => {
     setquery(nameTosearch);
   };
+
   return (
-    <div>
-      <div >
-        <Header onSearch={fetchBooks} />
-        {/* ✅ Show MainMessage only when no query OR when books are cleared */}
-      {!query && !loading && !error && bookData.length === 0 && <MainMessage />}
+    <div className="flex flex-col min-h-screen">
+      {/* Header */}
+      <Header onSearch={fetchBooks} />
 
-        {/* show loading message */}
-        {loading && <GettingBooks/> }
-
-        {/* show API error message */}
-        {error && <ErrorElement/>}
-
-        {/* show no results when API works but returns nothing */}
-        {!loading && !error && bookData.length === 0 && query && <Noresult/>}
-
-        <Body books={bookData} />
-        <Footer/>
+      {/* Middle Section */}
+      <div className="flex-grow flex items-center justify-center px-4">
+        {!query && !loading && !error && bookData.length === 0 && <MainMessage />}
+        {loading && <GettingBooks />}
+        {error && <ErrorElement />}
+        {!loading && !error && bookData.length === 0 && query && <Noresult />}
+        {bookData.length > 0 && <Body books={bookData} />}
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
