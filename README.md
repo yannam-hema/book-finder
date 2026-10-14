@@ -1,6 +1,8 @@
 # Aganitha-Web-developer-Task-BookFinder
 Book Finder web Application will help to search for books 
 
+**Never rename a folder in git mid-project! I learned this the hard way while working on this project ,after changing a folder name a few commits in. Everything broke, and it took a long battle with ChatGPT to finally realize what went wrong. Haha!**
+
 ## 📖 Book Finder 
 
 Book Finder is a minimalist and user-friendly web application built with React and Tailwind CSS that allows users to search for books by title using the Open Library API.
