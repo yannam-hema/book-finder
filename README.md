@@ -1,5 +1,6 @@
 # Aganitha WebDeveloper Task 
-**Book Finder**
+**Book Finder - base version**
+
 Book Finder web Application will help to search for books 
 
 **Never rename a folder in git mid-project! I learned this the hard way while working on this project ,after changing a folder name a few commits in. Everything broke, and it took a long battle with ChatGPT to finally realize what went wrong. Haha!**
